@@ -1,0 +1,34 @@
+:root {
+  /* Rhythm */
+  --yr: 0.25rem;
+
+  /* Typography */
+  --font-size-base: 16px;
+  --font-size-small: calc(var(--yr) * 3);
+  --font-size-small-plus: calc(var(--yr) * 3.25);
+  --font-size-regular: calc(var(--yr) * 3.5);
+  --font-size-regular-plus: calc(var(--yr) * 3.75);
+  --font-size-regular-big: calc(var(--yr) * 4);
+
+  /* Colors */
+  --black: #3b434e;
+  --white: #fff;
+  --gray: #e0e0e0;
+  --gray-dark: #888;
+  --red: #de0000;
+  --red-light: #fc836d;
+  --green: #26aa73;
+  --green-light: #e6f4ea;
+  --background-color-base: var(--white);
+
+  /* Paddings */
+  --container-padding: calc(var(--yr) * 2);
+
+  /* Other */
+  --border-radius: var(--yr);
+
+  /* Variables */
+  --info-cell-width: 40px;
+  --cell-width: 120px;
+  --row-height: calc(var(--yr) * 6);
+}

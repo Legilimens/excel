@@ -1,0 +1,36 @@
+.base-container {
+  display: flex;
+  align-items: center;
+  background: var(--white);
+  border-bottom: 1px solid var(--gray);
+}
+
+.container-padding {
+  padding: calc(var(--container-padding) / 2) var(--container-padding);
+}
+
+@mixin button($color: var(--green)) {
+  padding: var(--yr);
+  border-radius: var(--border-radius);
+  user-select: none;
+
+  & > span {
+    font-size: calc(var(--yr) * 5);
+
+    &:active,
+    &.active {
+      color: $color;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    background: var(--gray);
+  }
+}
+
+@mixin clear-list() {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

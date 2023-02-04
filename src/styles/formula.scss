@@ -1,0 +1,21 @@
+@import 'mixins';
+
+.excel__formula {
+  @extend .base-container;
+
+  .info {
+    font-size: var(--font-size-regular-big);
+    font-style: italic;
+    text-align: center;
+    border-right: 1px solid var(--gray);
+    width: var(--info-cell-width);
+    padding: calc(var(--yr) * 1.5) 0;
+    color: var(--gray-dark)
+  }
+
+  .input {
+    flex: 1;
+    outline: none;
+    padding: 0 calc(var(--yr) * 2);
+  }
+}

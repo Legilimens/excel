@@ -1,0 +1,45 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  },
+  "plugins": ["@typescript-eslint", "prettier", "sonarjs"],
+  "extends": [
+    "airbnb",
+    "prettier",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:sonarjs/recommended"
+  ],
+  "rules": {
+    "semi": ["error"],
+    "@typescript-eslint/no-empty-interface": [
+      "error",
+      {
+        "allowSingleExtends": true
+      }
+    ],
+    "import/no-unresolved": [
+      "error",
+      {
+        "ignore": [".", "@", "@core"]
+      }
+    ],
+    "import/extensions": [
+      "error",
+      "never",
+      {
+        "png": "ignorePackages",
+        "svg": "ignorePackages",
+        "pdf": "ignorePackages",
+        "json": "ignorePackages",
+        "css": "ignorePackages",
+        "scss": "ignorePackages"
+      }
+    ],
+    "import/prefer-default-export": "off"
+  }
+}

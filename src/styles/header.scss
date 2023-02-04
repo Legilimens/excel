@@ -1,0 +1,31 @@
+@import 'mixins';
+
+.excel__header {
+  @extend .base-container;
+  @extend .container-padding;
+  justify-content: space-between;
+
+  .input {
+    font-size: var(--font-size-regular-big);
+    border: 1px solid transparent;
+    padding: calc(var(--yr) * 3) calc(var(--yr) * 2);
+    border-radius: var(--border-radius);
+    height: calc(var(--yr) * 5);
+    outline: none;
+    transition: 200ms;
+
+    &:hover,
+    &:focus {
+      border: 1px solid var(--black);
+    }
+  }
+
+  .buttons {
+    display: flex;
+    gap: calc(var(--yr) * 2);
+
+    .button {
+      @include button();
+    }
+  }
+}
