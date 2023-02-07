@@ -1,14 +1,10 @@
-import { b } from '@core';
-import { c } from '@core/test';
-import { a } from '@/module';
+import { Excel } from '@/components/excel';
+import { Header, Toolbar, Formula, Table } from '@/components';
 
 import '@/styles/global.scss';
 
-console.log('hi!');
-console.log(a);
-console.log(b);
-console.log(c);
+const excel = new Excel('#app', {
+  components: [Header, Toolbar, Formula, Table],
+});
 
-const asyncTest = async () => Promise.resolve('hihihi!');
-
-asyncTest().then((res) => console.log(res));
+excel.render();
