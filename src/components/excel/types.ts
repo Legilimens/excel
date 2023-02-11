@@ -1,10 +1,12 @@
 import { Header, Toolbar, Formula, Table } from '@/components';
 
-export type TComponent =
+export type TComponentClass =
   | typeof Header
   | typeof Toolbar
   | typeof Formula
   | typeof Table;
+
+export type TComponent = Header | Toolbar | Formula | Table;
 
 export const isComponentInStickyHeader = (
   Component: Header | Toolbar | Formula,

@@ -26,7 +26,17 @@ class Dom {
 
     return this;
   }
+
+  public on(eventType: keyof HTMLElementEventMap, cb: () => void) {
+    this._$el.addEventListener(eventType, cb);
+  }
+
+  public off(eventType: keyof HTMLElementEventMap, cb: () => void) {
+    this._$el.removeEventListener(eventType, cb);
+  }
 }
+
+export type TDom = Dom;
 
 export function $(selector: HTMLElement | string) {
   return new Dom(selector);
